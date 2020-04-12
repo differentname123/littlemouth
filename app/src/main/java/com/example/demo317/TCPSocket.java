@@ -46,8 +46,8 @@ public class TCPSocket {
 
                     Log.d("TCP", "初始化前socket为"+String.valueOf(socket));
                     // 创建Socket对象 & 指定服务端的IP 及 端口号
-                   // socket = new Socket("111.229.197.188", 12345); //服务器IP及端口
-                    socket = new Socket("192.168.0.106", 12345); //服务器IP及端口
+                    socket = new Socket("49.233.84.121", 12345); //云服务器IP及端口
+                    //socket = new Socket("192.168.0.106", 12345); //本地服务器IP及端口
                     Log.d("TCP", "初始化后socket为"+String.valueOf(socket));
                     // 判断客户端和服务器是否连接成功
                     System.out.println(socket.isConnected());
