@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/page_2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="400dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="8dp"
+    >
+
+
+    <ImageView
+        android:id="@+id/textPic"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/o1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="170dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:text="TextView"
+        app:layout_constraintTop_toBottomOf="@+id/textPic" />
+
+
+    <ImageView
+        android:id="@+id/Head"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/page1_head"
+        app:layout_constraintTop_toBottomOf="@+id/textTitle"/>
+
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="86dp"
+        android:layout_height="39dp"
+        android:text="NetworkName"
+        app:layout_constraintLeft_toRightOf="@id/Head"
+        app:layout_constraintTop_toBottomOf="@+id/textTitle" />
+
+    <ImageView
+        android:id="@+id/Xin"
+        android:layout_width="33dp"
+        android:layout_height="36dp"
+        android:src="@drawable/xin"
+        app:layout_constraintLeft_toRightOf="@+id/Name"
+        app:layout_constraintTop_toBottomOf="@+id/textTitle" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
