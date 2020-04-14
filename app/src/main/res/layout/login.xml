@@ -98,12 +98,13 @@
 
 
             <EditText
+                android:id="@+id/account"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawablePadding="16dp"
                 android:drawableRight="@drawable/ic_email_white_24dp"
                 android:fontFamily="@font/calibri"
-                android:hint="Email"
+                android:hint="Account"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:textColor="#000000"
@@ -112,6 +113,7 @@
 
 
             <EditText
+                android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawablePadding="16dp"

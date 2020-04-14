@@ -11,6 +11,7 @@ import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -47,8 +48,8 @@ public class TCPSocket {
 
                     Log.d("TCP", "初始化前socket为"+String.valueOf(socket));
                     // 创建Socket对象 & 指定服务端的IP 及 端口号
-                    socket = new Socket("49.233.84.121", 12345); //云服务器IP及端口
-                    //socket = new Socket("192.168.0.106", 12345); //本地服务器IP及端口
+                    //socket = new Socket("49.233.84.121", 12345); //云服务器IP及端口
+                    socket = new Socket("192.168.0.106", 12345); //本地服务器IP及端口
                     Log.d("TCP", "初始化后socket为"+String.valueOf(socket));
                     // 判断客户端和服务器是否连接成功
                     System.out.println(socket.isConnected());
@@ -59,6 +60,27 @@ public class TCPSocket {
 
 
         lock.unlock();
+    }
+
+    public void sendjson(String account,String password,String order) throws IOException {
+        String st;
+        DataOutputStream dos;
+        JSONObject object = new JSONObject();
+        object.put("order",order);
+        object.put("account",account);
+        object.put("password",password);
+        st=object.toString();
+        Log.d("TCP", "发送请求前socket为"+String.valueOf(socket));
+        dos = new DataOutputStream(socket.getOutputStream());
+        dos.writeUTF(st);
+        dos.flush();
+    }
+    public String recivestr() throws IOException {
+        BufferedReader in = null;//接收字符串
+        String result;
+        in = new BufferedReader(new InputStreamReader(socket.getInputStream()));//接收字符串
+        result=in.readLine();
+        return result;
     }
 
     public synchronized void tcpsendstring(final String mes) {//发送字符串
