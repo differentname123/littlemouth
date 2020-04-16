@@ -27,11 +27,15 @@ public class date {
         //fis.read(data1);
         //st1=data1.toString();
 		object.put("name","mianhua");
-		object.put("string","中文");
+		object.put("date","2020/03/07");
+		object.put("praise_flag",0);
+		//object.put("string",0);
+		object.put("praise_num",10);
+		object.put("content","这是一段文字,这是一段文字,这是一段文字,这是一段文字");
 		//object.put("byte",data1);
-		object.put("int",2);  
-		object.put("boolean",true);
-		
+		//object.put("int",2);  
+		//object.put("boolean",true);
+	
 	
 		System.out.println("类里面"+object);
 		jsonByte=object.toString().getBytes("UTF-8");

@@ -25,15 +25,37 @@ public class RequestResponse {
 		switch (js.getString("order")) {
 			case "denglu":
 				System.out.println("这是登录的命令"+js);
-				photosend.send(CheckDenglu(js));
+				photosend.sendstr(CheckDenglu(js));
 				break;
 				
 				
 			case "zhuce":
 				System.out.println("这是注册的命令"+js);
-				register(js);
+				photosend.sendstr(register(js));
 
 				break;
+				
+			case "page1":
+				System.out.println("这是page1的命令"+js);
+				if(js.getString("type").equals("txt")) {
+					
+					
+					if(js.getString("item").equals("-1")) {
+						photosend.tcprecievejson();
+						
+						
+					}else {
+						filecaozuo fi=new filecaozuo();
+						photosend.sendjson1(fi.duqu());
+					}
+				}else if(js.getString("type").equals("photo1")){
+					
+					System.out.println("接收图片");
+					photosend.tcprecievephoto();
+				}
+				else {
+					photosend.send("C:/Users/Administrator/Downloads/test.jpg");
+				}
 				
 				
 			 default:
@@ -44,51 +66,84 @@ public class RequestResponse {
 	public String CheckDenglu(JSONObject JSON) throws Exception {
 		String account;
 		String password;
-		File file = new File("./data.txt");
-		BufferedReader reader = new BufferedReader(new FileReader(file));
-		String tempString = null;  
-		int line = 1;  
-		// 一次读入一行，直到读入null为文件结束  
-		while ((tempString = reader.readLine()) != null) {  
-		    // 显示行号  
-		    System.out.println("line " + line + ": " + tempString);  
-		    line++;  
-		}  
-		reader.close();  
-
+		String result="false";
+		JSONObject js1;
+		
 		
 		account=JSON.getString("account");
 		password=JSON.getString("password");
 		
-		if(account.equals("hsiaohuchu")&&password.equals("123456"))	{
-			return "true";
-		}else{
-			return "false";
+		BufferedReader br = new BufferedReader(new FileReader("./data.txt"));
+		String line;
+		while((line = br.readLine()) != null)
+		{
+			js1 = JSONObject.fromObject(line);
+			if(js1.get("account").equals(account)&&js1.get("password").equals(password)) {
+				result="true";
+				break;
+				
+			}
+			//System.out.println(line);
 		}
+		br.close();
+		return result;
 			
 		
 		
 		
 	}
-	public String register(JSONObject JSON) throws IOException {
+	public String Isregister(String account,String password) throws Exception {
+		String result ="No";
+		JSONObject js1;
+		BufferedReader br = new BufferedReader(new FileReader("./data.txt"));
+		String line;
+		while((line = br.readLine()) != null)
+		{
+			js1 = JSONObject.fromObject(line);
+			if(js1.get("account").equals(account)) {
+				result="Yes";
+				break;
+				
+			}
+			//System.out.println(line);
+		}
+		br.close();
+		return result;
+		
+	}
+	public String register(JSONObject JSON) throws Exception {
 		String account;
 		String password;
+		String result;
+		account=JSON.getString("account");
+		password=JSON.getString("password");
+		
+		System.out.print("文件的创建");
 		File file = new File("./data.txt");
+		System.out.println("路径：" + file.getAbsolutePath());
 		if(!file.exists()) {
 			file.createNewFile();
 			System.out.println("创建文件成功");
 		}
-		FileWriter fw = new FileWriter(file,true);
-		fw.write(JSON.toString()+"\n");
-		fw.close();
-		account=JSON.getString("account");
-		password=JSON.getString("password");
 		
-		if(account.equals("hsiaohuchu")&&password.equals("123456"))	{
-			return "true";
-		}else{
+		System.out.print("进入账号比对结果");
+		result = Isregister(account,password);
+		System.out.print("账号比对结果为"+result);
+		if(result.equals("Yes")) {
 			return "false";
+		}else {
+			
+			FileWriter fw = new FileWriter(file,true);
+			fw.write(JSON.toString()+"\n");
+			fw.close();
+			return "true";
 		}
+		
+		
+		
+	
+		
+		
 			
 		
 		
