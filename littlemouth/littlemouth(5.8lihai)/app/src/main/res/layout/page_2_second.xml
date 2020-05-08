@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+
+            <ImageView
+                android:id="@+id/page1_head"
+                android:layout_width="133dp"
+                android:layout_height="133dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/page1_head"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="0dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/caiming"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:text="红烧狮子头"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:layout_weight="2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/page1_head" />
+
+                <ImageView
+                    android:id="@+id/Xin"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="78dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/xin1"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/page2_content"
+            android:layout_width="370dp"
+            android:layout_height="260dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/o11" />
+
+        <TextView
+            android:id="@+id/page1_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="#E6F1F0"
+            android:text="  市场买回来的绞肉记得要求店家多绞两次 让质感接近肉浆略为对豆腐加压 减少内含水分 使用前切除外面较硬部份(这部份可以用来干煎或是切丝拌炒)避免影响口感 揉碎拌入绞肉中放入少许盐及胡椒 开始搅拌过程中如感觉水分过多可添加少许面粉调整黏性将搅拌完成绞肉捏成约双掌合握大小球状下锅以中火油炸定型即可白菜切成一口大小 红萝卜切片 葱以及辣椒切丝备用热锅加入约2匙油 先将红萝卜炒透(除了加速熟成 也有助于红萝卜本身内含脂溶性维生素A的释放)接着放入辣椒及葱白部份炒出香气后倒入热水漫过食材 并将白菜放入加盖闷煮约10分开盖观察白菜如转为透明即代表熟成 这时加入少许糖及酱油并将狮子头放入继续闷煮约20分最后洒上葱绿 加入少许乌醋 勾上薄芡几点\n    香油点香即可起锅"
+            android:textSize="21dp" /><!--</ScrollView>-->
+    </LinearLayout>
+</ScrollView>

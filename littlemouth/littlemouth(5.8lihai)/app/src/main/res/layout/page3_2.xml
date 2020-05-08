@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+        <EditText
+            android:id="@+id/Search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="美食排行榜"/>
+        <ImageView
+            android:id="@+id/bigger"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="335dp"
+            android:src="@drawable/img3"
+            android:layout_marginStart="335dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/N2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="83dp"
+            android:layout_height="81dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/img1"
+            android:layout_alignParentStart="true" />
+
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/image"
+            android:text="彼岸花"
+            android:textColor="#576B95" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/image"
+            android:text="2020/3/11"
+            android:textColor="#576B95" />
+        <TextView
+            android:id="@+id/hot_vaue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_toRightOf="@+id/image"
+            android:text="火力值"
+            android:textColor="#DC143C" />
+
+
+        <TextView
+            android:id="@+id/Bt1"
+            android:layout_width="43dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="290dp"
+            android:background="#DCDCDC"
+            android:text="关注"
+            android:textColor="#576B95"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/share_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="######这里可以修改修改修改修改哦###3月10日，宁夏纪委
+            监委网站消息，自治区纪委监委对第十二届自治区党委原委员、固原市委原常委、西吉
+            县委原书记马志宏严重违纪违法问题进行了立案审查调查。#####这里可以修改修改修改修改哦###3月10日，宁夏纪委
+            监委网站消息，自治区纪委监委对第十二届自治区党委原委员、固原市委原常委、西吉
+            县委原书记马志宏严重违纪违法问题进行了立案审查调查这里可以修改修改修改修改哦###3月10日，宁夏纪委
+            监委网站消息，自治区纪委监委对第十二届自治区党委原委员、固原市委原常委、西吉
+            县委原书记马志宏严重违纪违法问题进行了立案审查调查。#####这里可以修改修改修改修改哦###3月10日，宁夏纪委
+            监委网站消息，自治区纪委监委对第十二届自治区党委原委员、固原市委原常委、西吉
+            县委原书记马志宏严重违纪违法问题进行了立案审查调查***"
+            android:textStyle="italic"
+            android:textSize="13dp"/>
+
+
+        <LinearLayout
+            android:id="@+id/img_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/share_voice"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/share_img1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/img4" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="     "/>
+            <ImageView
+                android:id="@+id/share_img2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/img5" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_home"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/Bt2"
+
+                android:layout_weight="4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="转发" />
+            <ImageView
+                android:layout_weight="6"
+                android:id="@+id/img11"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/img11" />
+            <TextView
+                android:layout_weight="4"
+                android:id="@+id/Bt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:background="@android:color/transparent"
+                android:text="收藏"/>
+            <ImageView
+                android:layout_weight="6"
+                android:id="@+id/img13"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+
+                android:src="@drawable/img13" />
+            <TextView
+                android:layout_weight="4"
+                android:id="@+id/Bt4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="评论"/>
+            <ImageView
+                android:layout_weight="6"
+                android:id="@+id/img12"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+
+                android:src="@drawable/img12" />
+            <TextView
+                android:layout_weight="4"
+                android:id="@+id/Bt5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="点赞"/>
+            <ImageView
+                android:layout_weight="6"
+                android:id="@+id/img10"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+
+                android:src="@drawable/img10" />
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

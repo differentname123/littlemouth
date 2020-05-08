@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.share.Page1_AddActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#38DAF8"
+        >
+
+        <TextView
+            android:id="@+id/tt_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="美食安利"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:textSize="24dp"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/tt_up"
+            android:src="@drawable/page1_chicken"
+            />
+        <ImageView
+
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/tt_up"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/page1_hamburg"
+
+            />
+
+        <ImageView
+
+            android:id="@+id/page1_return"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/page1_return"
+
+            />
+        <Button
+            android:text="发表"
+            android:id="@+id/page1_send"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+             />
+    </RelativeLayout>
+    
+    <EditText
+        android:id="@+id/page1_content"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="top"
+        android:hint="开始你的分享把~"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        >
+        <ImageView
+            android:id="@+id/page1_add_photo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/page1_add_photo"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:id="@+id/page1_add_photo2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/page1_add_photo"
+            android:layout_weight="1"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
